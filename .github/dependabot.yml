@@ -1,0 +1,32 @@
+---
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: daily
+  - package-ecosystem: "pip"
+    directory: "/client/python"
+    open-pull-requests-limit: 20
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "npm"
+    directory: "/gui"
+    open-pull-requests-limit: 20
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "cargo"
+    directory: "/gui/src-tauri"
+    open-pull-requests-limit: 20
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "pip"
+    directory: "/integration/homeassistant"
+    open-pull-requests-limit: 20
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "gomod"
+    directory: "/server"
+    open-pull-requests-limit: 20
+    schedule:
+      interval: "daily"
