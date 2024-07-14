@@ -64,13 +64,11 @@ jobs:
           go-version: "stable"
       - name: Build
         run: go build -o letmeknow-server-${{ matrix.arch }}${{ matrix.platform == 'windows-latest' && '.exe' || '' }} -v .
-        working-directory: server
       - name: Test
         run: go test -v ./...
-        working-directory: server
       - name: Upload artifacts
         uses: actions/upload-artifact@v4.3.4
         with:
-          name: server-${{ matrix.name }}
+          name: ${{ matrix.name }}
           path: |
-            server/letmeknow-server-${{ matrix.arch }}${{ matrix.platform == 'windows-latest' && '.exe' || '' }}
+            letmeknow-server-${{ matrix.arch }}${{ matrix.platform == 'windows-latest' && '.exe' || '' }}
