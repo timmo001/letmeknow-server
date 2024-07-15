@@ -7,8 +7,7 @@ import (
 	"strings"
 
 	"github.com/gorilla/websocket"
-	typesNotification "github.com/timmo001/letmeknow-server/types/notification"
-	types "github.com/timmo001/letmeknow-server/types/websocket"
+	types "github.com/timmo001/letmeknow-types-go"
 )
 
 // TODO: Add user authentication, so only authenticated users can send messages
@@ -245,7 +244,7 @@ func WebSocket(w http.ResponseWriter, r *http.Request) {
 			}
 		}
 
-		var image *typesNotification.Image
+		var image *types.Image
 		if _, ok := requestData["image"]; ok {
 			if i, ok := requestData["image"].(map[string]interface{}); ok {
 				var url string
@@ -254,7 +253,7 @@ func WebSocket(w http.ResponseWriter, r *http.Request) {
 					url = i["url"].(string)
 				}
 
-				image = &typesNotification.Image{
+				image = &types.Image{
 					URL: url,
 				}
 			}
@@ -262,7 +261,7 @@ func WebSocket(w http.ResponseWriter, r *http.Request) {
 
 		// Convert request to Notification
 		notification := types.RequestNotification{
-			Data: typesNotification.Notification{
+			Data: types.Notification{
 				Type:     "notification",
 				Title:    title,
 				Subtitle: subtitle,
