@@ -1,5 +1,5 @@
 ---
-name: "Server - Build & Test"
+name: "Build & Test"
 
 # yamllint disable-line rule:truthy
 on:
@@ -59,7 +59,6 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v5.0.2
         with:
-          cache-dependency-path: server/go.mod
           check-latest: true
           go-version: "stable"
       - name: Build
