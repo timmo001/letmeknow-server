@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/gorilla/websocket"
-	typesNotification "github.com/timmo001/letmeknow/server/types/notification"
+	typesNotification "github.com/timmo001/letmeknow-server/types/notification"
 )
 
 type Client struct {

@@ -1,4 +1,4 @@
-module github.com/timmo001/letmeknow/server
+module github.com/timmo001/letmeknow-server
 
 go 1.22.4
 

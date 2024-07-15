@@ -7,8 +7,8 @@ import (
 	"strings"
 
 	"github.com/gorilla/websocket"
-	typesNotification "github.com/timmo001/letmeknow/server/types/notification"
-	types "github.com/timmo001/letmeknow/server/types/websocket"
+	typesNotification "github.com/timmo001/letmeknow-server/types/notification"
+	types "github.com/timmo001/letmeknow-server/types/websocket"
 )
 
 // TODO: Add user authentication, so only authenticated users can send messages

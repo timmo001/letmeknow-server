@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/timmo001/letmeknow/server/websocket"
+	"github.com/timmo001/letmeknow-server/websocket"
 )
 
 var addr = flag.String("addr", ":8080", "http service address")
